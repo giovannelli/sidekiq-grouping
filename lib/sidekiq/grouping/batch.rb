@@ -94,7 +94,7 @@ module Sidekiq
         return false if size.zero?
 
         last_time = last_execution_time
-        next_time = next_execution_time
+        next_time = Time.now
 
         if last_time.blank?
           set_current_time_as_last
